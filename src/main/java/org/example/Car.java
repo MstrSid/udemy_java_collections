@@ -20,7 +20,15 @@ public class Car {
     }
 
     @Override
-    public String toString() {
-        return String.format("Brand: %s, number: %d", brand, number);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return number == car.number && Objects.equals(brand, car.brand);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(brand, number);
     }
 }

@@ -6,5 +6,9 @@ public class Main {
         Car car2 = new Car("BMW", 1);
 
         System.out.println(car1.equals(car2));
+        System.out.println(car1.hashCode());
+        System.out.println(car2.hashCode());
+
+        System.out.println(car1 == car2);
     }
 }
