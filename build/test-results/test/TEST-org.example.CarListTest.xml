@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.example.CarListTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-10-07T07:09:42" hostname="KOS-NOTEBOOK" time="0.196">
+<testsuite name="org.example.CarListTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-10-07T12:17:31" hostname="KOS-NOTEBOOK" time="0.207">
   <properties/>
-  <testcase name="whenIndexOfBoundsThenThrownException()" classname="org.example.CarListTest" time="0.097"/>
-  <testcase name="whenAdded100ElementsTHenSizeMusBe100()" classname="org.example.CarListTest" time="0.004"/>
-  <testcase name="whenElementRemovedByIndexThenSizeMustBeDecreased()" classname="org.example.CarListTest" time="0.008"/>
-  <testcase name="whenNonExistedElementRemovedThenReturnFalse()" classname="org.example.CarListTest" time="0.036"/>
+  <testcase name="whenIndexOfBoundsThenThrownException()" classname="org.example.CarListTest" time="0.067"/>
+  <testcase name="whenAdded100ElementsTHenSizeMusBe100()" classname="org.example.CarListTest" time="0.003"/>
+  <testcase name="whenElementRemovedByIndexThenSizeMustBeDecreased()" classname="org.example.CarListTest" time="0.003"/>
+  <testcase name="whenNonExistedElementRemovedThenReturnFalse()" classname="org.example.CarListTest" time="0.035"/>
   <testcase name="whenListClearedThenSizeMustBe0()" classname="org.example.CarListTest" time="0.002"/>
-  <testcase name="insertIntoFirstPosition()" classname="org.example.CarListTest" time="0.004"/>
-  <testcase name="whenElementRemovedThenSizeMustBeDecreased()" classname="org.example.CarListTest" time="0.025"/>
+  <testcase name="insertIntoFirstPosition()" classname="org.example.CarListTest" time="0.026"/>
+  <testcase name="whenElementRemovedThenSizeMustBeDecreased()" classname="org.example.CarListTest" time="0.039"/>
   <testcase name="insertIntoLastPosition()" classname="org.example.CarListTest" time="0.002"/>
-  <testcase name="getReturnRightValue()" classname="org.example.CarListTest" time="0.001"/>
+  <testcase name="getReturnRightValue()" classname="org.example.CarListTest" time="0.003"/>
   <testcase name="insertIntoMiddle()" classname="org.example.CarListTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
