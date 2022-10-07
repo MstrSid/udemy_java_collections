@@ -1,5 +1,8 @@
 package org.example;
 
+import org.example.customarraylist.Car;
+import org.example.customarraylist.CarList;
+import org.example.customarraylist.CarListArray;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

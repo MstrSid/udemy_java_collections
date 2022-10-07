@@ -1,4 +1,4 @@
-package org.example;
+package org.example.customarraylist;
 
 public class Car {
     private String brand;
