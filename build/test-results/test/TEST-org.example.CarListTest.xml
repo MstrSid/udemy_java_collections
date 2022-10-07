@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.example.CarListTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-10-07T05:08:24" hostname="KOS-NOTEBOOK" time="0.117">
+<testsuite name="org.example.CarListTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-10-07T05:51:15" hostname="KOS-NOTEBOOK" time="0.125">
   <properties/>
-  <testcase name="whenIndexOfBoundsThenThrownException()" classname="org.example.CarListTest" time="0.051"/>
+  <testcase name="whenIndexOfBoundsThenThrownException()" classname="org.example.CarListTest" time="0.048"/>
   <testcase name="whenAdded100ElementsTHenSizeMusBe100()" classname="org.example.CarListTest" time="0.004"/>
   <testcase name="whenElementRemovedByIndexThenSizeMustBeDecreased()" classname="org.example.CarListTest" time="0.003"/>
-  <testcase name="whenNonExistedElementRemovedThenReturnFalse()" classname="org.example.CarListTest" time="0.019"/>
-  <testcase name="whenListClearedThenSizeMustBe0()" classname="org.example.CarListTest" time="0.002"/>
-  <testcase name="whenElementRemovedThenSizeMustBeDecreased()" classname="org.example.CarListTest" time="0.021"/>
-  <testcase name="getReturnRightValue()" classname="org.example.CarListTest" time="0.004"/>
+  <testcase name="whenNonExistedElementRemovedThenReturnFalse()" classname="org.example.CarListTest" time="0.022"/>
+  <testcase name="whenListClearedThenSizeMustBe0()" classname="org.example.CarListTest" time="0.003"/>
+  <testcase name="insertIntoFirstPosition()" classname="org.example.CarListTest" time="0.003"/>
+  <testcase name="whenElementRemovedThenSizeMustBeDecreased()" classname="org.example.CarListTest" time="0.022"/>
+  <testcase name="insertIntoLastPosition()" classname="org.example.CarListTest" time="0.002"/>
+  <testcase name="getReturnRightValue()" classname="org.example.CarListTest" time="0.001"/>
+  <testcase name="insertIntoMiddle()" classname="org.example.CarListTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

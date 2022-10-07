@@ -15,8 +15,11 @@ public class Main {
         System.out.println(carList.get(20));
         System.out.println(carList.size());
 
+
+        carList.add(new Car("BMW", 245), 1);
         for (int i = 0; i < carList.size(); i++) {
             System.out.println(carList.get(i));
         }
+        System.out.println(carList.size());
     }
 }
