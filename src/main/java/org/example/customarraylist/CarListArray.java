@@ -1,5 +1,8 @@
 package org.example.customarraylist;
 
+import org.example.Car;
+import org.example.interfaces.CarList;
+
 import java.util.Arrays;
 
 public class CarListArray implements CarList {

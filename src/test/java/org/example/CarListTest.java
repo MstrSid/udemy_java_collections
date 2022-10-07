@@ -1,7 +1,7 @@
 package org.example;
 
-import org.example.customarraylist.Car;
-import org.example.customarraylist.CarList;
+import org.example.customlinkedlist.CarLinkedList;
+import org.example.interfaces.CarList;
 import org.example.customarraylist.CarListArray;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -13,7 +13,7 @@ class CarListTest {
 
     @BeforeEach
     void setUp() {
-        carList = new CarListArray();
+        carList = new CarLinkedList();
         for (int i = 0; i < 100; i++) {
             carList.add(new Car("Brand" + i, i));
         }

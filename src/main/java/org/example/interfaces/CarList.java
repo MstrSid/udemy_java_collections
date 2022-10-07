@@ -1,4 +1,6 @@
-package org.example.customarraylist;
+package org.example.interfaces;
+
+import org.example.Car;
 
 public interface CarList {
     Car get(int index);
