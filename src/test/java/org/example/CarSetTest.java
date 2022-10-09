@@ -1,6 +1,5 @@
 package org.example;
 
-import org.example.Car;
 import org.example.customhashset.CarHashSet;
 import org.example.interfaces.CarSet;
 import org.junit.jupiter.api.BeforeEach;
