@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Objects;
 
-public class Car {
+public class Car /*implements Comparable<Car>*/ {
     private String brand;
     private int number;
 
@@ -30,5 +30,16 @@ public class Car {
     @Override
     public int hashCode() {
         return Objects.hash(brand, number);
+    }
+
+//    @Override
+//    public int compareTo(Car o) {
+//        return brand.compareTo(o.brand);
+//
+//    }
+
+    @Override
+    public String toString() {
+        return String.format("%s, %d", brand, number);
     }
 }
