@@ -2,14 +2,15 @@ package org.example.interfaces;
 
 import org.example.Car;
 
-public interface CarCollection extends Iterable<Car>{
-    boolean add(Car car);
+public interface CarCollection extends Iterable<Car> {
 
-    boolean remove(Car car);
+  boolean add(Car car);
 
-    void clear();
+  boolean remove(Car car);
 
-    int size();
+  void clear();
 
-    boolean contains(Car car);
+  int size();
+
+  boolean contains(Car car);
 }

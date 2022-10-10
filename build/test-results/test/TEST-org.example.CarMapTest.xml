@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.CarMapTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-10-10T11:44:58" hostname="KOS-NOTEBOOK" time="0.078">
+  <properties/>
+  <testcase name="methodGetMustReturnRightValue()" classname="org.example.CarMapTest" time="0.053"/>
+  <testcase name="removeReturnTrueOnlyOnce()" classname="org.example.CarMapTest" time="0.008"/>
+  <testcase name="countOfKeysMustBeEqualsToCountOfValues()" classname="org.example.CarMapTest" time="0.004"/>
+  <testcase name="whenPut100ElementsWith10DifferentKeysThenSize10()" classname="org.example.CarMapTest" time="0.004"/>
+  <testcase name="whenPut100ElementsThenSizeBecome100()" classname="org.example.CarMapTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

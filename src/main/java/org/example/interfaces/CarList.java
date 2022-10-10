@@ -2,10 +2,11 @@ package org.example.interfaces;
 
 import org.example.Car;
 
-public interface CarList extends CarCollection{
-    Car get(int index);
+public interface CarList extends CarCollection {
 
-    boolean add(Car car, int index);
+  Car get(int index);
 
-    boolean removeAt(int index);
+  boolean add(Car car, int index);
+
+  boolean removeAt(int index);
 }
