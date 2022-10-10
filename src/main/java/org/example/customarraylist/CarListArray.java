@@ -4,6 +4,7 @@ import org.example.Car;
 import org.example.interfaces.CarList;
 
 import java.util.Arrays;
+import java.util.Iterator;
 
 public class CarListArray implements CarList {
 
@@ -90,5 +91,22 @@ public class CarListArray implements CarList {
         if (size >= carArray.length) {
             carArray = Arrays.copyOf(carArray, carArray.length * 2);
         }
+    }
+
+    @Override
+    public Iterator<Car> iterator() {
+        return new Iterator<Car>() {
+            int index = 0;
+
+            @Override
+            public boolean hasNext() {
+                return index < size;
+            }
+
+            @Override
+            public Car next() {
+                return carArray[index++];
+            }
+        };
     }
 }
