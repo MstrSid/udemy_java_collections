@@ -1,28 +1,20 @@
 package org.example;
 
-import org.example.customarraylist.CarListArray;
-import org.example.customhashset.CarHashSet;
-import org.example.customlinkedlist.CarLinkedList;
-import org.example.interfaces.CarCollection;
-import org.example.interfaces.CarList;
-import org.example.interfaces.CarSet;
-
-import java.util.*;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Main {
 
   public static void main(String[] args) {
-    HashMap<CarOwner, Car> cars = new HashMap<>();
-    cars.put(new CarOwner(1, "Mike", "Stevens"),
-        new Car("Mazda", 323));
-    cars.put(new CarOwner(2, "Bob", "Dow"),
-        new Car("Mazda", 626));
-    cars.put(new CarOwner(3, "Ann", "Lynch"),
-        new Car("Mazda", 121));
-
-    for (CarOwner key : cars.keySet()) {
-      System.out.println(key + ": " + cars.get(key));
-    }
+    HashMap<CarOwner, Car> map = new HashMap<>();
+    CarOwner key = new CarOwner(1, "Bob", "Kyles");
+    Car value = new Car("Mazda", 323);
+    map.put(key, value);
+    key.setId(8); //нельзя изменять поля объекта, если он является ключом в HashMap.
+    Car car = map.get(key);
+    System.out.println(car.getBrand());
   }
 
   private static void showNumbersWithComparator() {
@@ -56,6 +48,20 @@ public class Main {
 
     for (Car car : cars) {
       System.out.println(car);
+    }
+  }
+
+  private static void getHashMap() {
+    HashMap<CarOwner, Car> cars = new HashMap<>();
+    cars.put(new CarOwner(1, "Mike", "Stevens"),
+        new Car("Mazda", 323));
+    cars.put(new CarOwner(2, "Bob", "Dow"),
+        new Car("Mazda", 626));
+    cars.put(new CarOwner(3, "Ann", "Lynch"),
+        new Car("Mazda", 121));
+
+    for (CarOwner key : cars.keySet()) {
+      System.out.println(key + ": " + cars.get(key));
     }
   }
 }
