@@ -4,25 +4,25 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import org.example.Car;
-import org.example.interfaces.CarSet;
+import org.example.interfaces.CustomSet;
 
-public class CarHashSet implements CarSet {
+public class CustomHashSet<T> implements CustomSet<T> {
 
-  private Map<Car, Object> map = new HashMap<>();
+  private Map<T, Object> map = new HashMap<>();
   private Object object = new Object();
 
   @Override
-  public boolean add(Car car) {
-    if (map.containsKey(car)) {
+  public boolean add(T elem) {
+    if (map.containsKey(elem)) {
       return false;
     }
-    map.put(car, object);
+    map.put(elem, object);
     return true;
   }
 
   @Override
-  public boolean remove(Car car) {
-    Object removed = map.remove(car);
+  public boolean remove(T elem) {
+    Object removed = map.remove(elem);
     return removed != null;
   }
 
@@ -32,8 +32,8 @@ public class CarHashSet implements CarSet {
   }
 
   @Override
-  public boolean contains(Car car) {
-    return map.containsKey(car);
+  public boolean contains(T elem) {
+    return map.containsKey(elem);
   }
 
   @Override
@@ -42,7 +42,7 @@ public class CarHashSet implements CarSet {
   }
 
   @Override
-  public Iterator<Car> iterator() {
+  public Iterator<T> iterator() {
     return map.keySet().iterator();
   }
 }

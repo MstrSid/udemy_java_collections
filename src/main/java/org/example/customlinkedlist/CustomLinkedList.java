@@ -1,30 +1,28 @@
 package org.example.customlinkedlist;
 
-import org.example.Car;
-import org.example.interfaces.CarList;
-
 import java.util.Iterator;
+import org.example.interfaces.CustomList;
 
-public class CarLinkedList implements CarList {
+public class CustomLinkedList<T> implements CustomList<T> {
 
   private Node first;
   private Node last;
   private int size = 0;
 
   @Override
-  public Car get(int index) {
+  public T get(int index) {
     return getNode(index).value;
   }
 
   @Override
-  public boolean add(Car car) {
+  public boolean add(T elem) {
     if (size == 0) {
-      Node node = new Node(null, car, null);
+      Node node = new Node(null, elem, null);
       first = node;
       last = node;
     } else {
       Node secondLast = last;
-      last = new Node(secondLast, car, null);
+      last = new Node(secondLast, elem, null);
       secondLast.next = last;
     }
     size++;
@@ -32,13 +30,13 @@ public class CarLinkedList implements CarList {
   }
 
   @Override
-  public boolean add(Car car, int index) {
+  public boolean add(T elem, int index) {
     if (index == size) {
-      return add(car);
+      return add(elem);
     }
     Node nodeNext = getNode(index);
     Node nodePrevious = nodeNext.previous;
-    Node newNode = new Node(nodePrevious, car, nodeNext);
+    Node newNode = new Node(nodePrevious, elem, nodeNext);
     nodeNext.previous = newNode;
     if (nodePrevious != null) {
       nodePrevious.next = newNode;
@@ -50,10 +48,10 @@ public class CarLinkedList implements CarList {
   }
 
   @Override
-  public boolean remove(Car car) {
+  public boolean remove(T elem) {
     Node node = first;
     for (int i = 0; i < size; i++) {
-      if (node.value.toString().equals(car.toString())) {
+      if (node.value.toString().equals(elem.toString())) {
         return removeAt(i);
       }
       node = node.next;
@@ -87,9 +85,9 @@ public class CarLinkedList implements CarList {
   }
 
   @Override
-  public boolean contains(Car car) {
+  public boolean contains(T elem) {
     for (int i = 0; i < size; i++) {
-      if (getNode(i).value.equals(car)) {
+      if (getNode(i).value.equals(elem)) {
         return true;
       }
     }
@@ -115,8 +113,8 @@ public class CarLinkedList implements CarList {
   }
 
   @Override
-  public Iterator<Car> iterator() {
-    return new Iterator<Car>() {
+  public Iterator<T> iterator() {
+    return new Iterator<T>() {
       private Node node = first;
 
       @Override
@@ -125,21 +123,21 @@ public class CarLinkedList implements CarList {
       }
 
       @Override
-      public Car next() {
-        Car car = node.value;
+      public T next() {
+        T car = node.value;
         node = node.next;
         return car;
       }
     };
   }
 
-  private static class Node {
+  private class Node {
 
     private Node previous;
-    private final Car value;
+    private final T value;
     private Node next;
 
-    public Node(Node previous, Car value, Node next) {
+    public Node(Node previous, T value, Node next) {
       this.previous = previous;
       this.value = value;
       this.next = next;

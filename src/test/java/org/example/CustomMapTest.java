@@ -2,21 +2,18 @@ package org.example;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.example.Car;
-import org.example.CarOwner;
-import org.example.customhashmap.CarHashMap;
-import org.example.interfaces.CarMap;
-import org.junit.jupiter.api.BeforeAll;
+import org.example.customhashmap.CustomHashMap;
+import org.example.interfaces.CustomMap;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class CarMapTest {
+class CustomMapTest {
 
-  private CarMap map;
+  private CustomMap<CarOwner, Car> map;
 
   @BeforeEach
   public void setUp() throws Exception {
-    map = new CarHashMap();
+    map = new CustomHashMap<>();
   }
 
   @Test

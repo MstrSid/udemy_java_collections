@@ -1,69 +1,68 @@
 package org.example;
 
-import org.example.customlinkedlist.CarLinkedList;
-import org.example.interfaces.CarList;
-import org.example.customarraylist.CarListArray;
+import org.example.customlinkedlist.CustomLinkedList;
+import org.example.interfaces.CustomList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CarListTest {
+class CustomListTest {
 
-  private CarList carList;
+  private CustomList<Car> customList;
 
   @BeforeEach
   void setUp() {
-    carList = new CarLinkedList();
+    customList = new CustomLinkedList<>();
     for (int i = 0; i < 100; i++) {
-      carList.add(new Car("Brand" + i, i));
+      customList.add(new Car("Brand" + i, i));
     }
   }
 
   @Test
   public void whenAdded100ElementsTHenSizeMusBe100() {
-    assertEquals(100, carList.size());
+    assertEquals(100, customList.size());
   }
 
   @Test
   public void whenElementRemovedByIndexThenSizeMustBeDecreased() {
-    assertTrue(carList.removeAt(5));
-    assertEquals(99, carList.size());
+    assertTrue(customList.removeAt(5));
+    assertEquals(99, customList.size());
   }
 
   @Test
   public void whenElementRemovedThenSizeMustBeDecreased() {
     Car car = new Car("Mazda", 1255);
-    carList.add(car);
-    assertEquals(101, carList.size());
-    assertTrue(carList.remove(car));
-    assertEquals(100, carList.size());
+    customList.add(car);
+    assertEquals(101, customList.size());
+    assertTrue(customList.remove(car));
+    assertEquals(100, customList.size());
   }
 
   @Test
   public void whenNonExistedElementRemovedThenReturnFalse() {
     Car car = new Car("Mazda", 1255);
-    assertFalse(carList.remove(car));
-    assertEquals(100, carList.size());
+    assertFalse(customList.remove(car));
+    assertEquals(100, customList.size());
   }
 
   @Test
   public void whenListClearedThenSizeMustBe0() {
-    carList.clear();
-    assertEquals(0, carList.size());
+    customList.clear();
+    assertEquals(0, customList.size());
   }
 
   @Test()
   public void whenIndexOfBoundsThenThrownException() {
     assertThrows(Exception.class, () -> {
-      carList.get(100);
+      customList.get(100);
     });
 
   }
 
   @Test
   public void getReturnRightValue() {
-    Car car = carList.get(0);
+    Car car = customList.get(0);
     assertEquals("Brand0", car.getBrand());
     assertEquals(0, car.getNumber());
   }
@@ -71,8 +70,8 @@ class CarListTest {
   @Test
   public void insertIntoMiddle() {
     Car car = new Car("BMW", 254);
-    carList.add(car, 50);
-    Car carFromList = carList.get(50);
+    customList.add(car, 50);
+    Car carFromList = customList.get(50);
     assertEquals("BMW", carFromList.getBrand());
     assertEquals(254, carFromList.getNumber());
   }
@@ -80,8 +79,8 @@ class CarListTest {
   @Test
   public void insertIntoFirstPosition() {
     Car car = new Car("BMW", 254);
-    carList.add(car, 0);
-    Car carFromList = carList.get(0);
+    customList.add(car, 0);
+    Car carFromList = customList.get(0);
     assertEquals("BMW", carFromList.getBrand());
     assertEquals(254, carFromList.getNumber());
   }
@@ -89,8 +88,8 @@ class CarListTest {
   @Test
   public void insertIntoLastPosition() {
     Car car = new Car("BMW", 254);
-    carList.add(car, 100);
-    Car carFromList = carList.get(100);
+    customList.add(car, 100);
+    Car carFromList = customList.get(100);
     assertEquals("BMW", carFromList.getBrand());
     assertEquals(254, carFromList.getNumber());
   }
